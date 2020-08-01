@@ -18,12 +18,13 @@ const vm = new Vue({
     },
 
     fetchProduto(id) {
-      fetch(`./api/produtos/${id}/dados/dados.json`)
+      fetch(`./api/produtos/${id}/dados.json`)
         .then(r => r.json() )
         .then(r => {
           this.produto = r;
       })
-    }   
+    },
+    fecharModal(event) {}   
   },
 
   created() {
